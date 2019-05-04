@@ -2,13 +2,16 @@
 echo "start"
 for((i=1; i<172; i++))
 do
-v=$(/sbin/route add -net "$i".0.0.0 netmask 255.0.0.0 gw 172.21.0.1 dev eth0) #182.92.123.247 is the gateway address of your Virtual-Machine server.
+v=$(/sbin/route add -net "$i".0.0.0 netmask 255.0.0.0 gw $GATEWAY_ADDR dev eth0)
+#GATEWAY_ADDR is the gateway address of the reverse proxy host.
+#You can check it by using "route -n".
 echo "$v"
 done
 
 for((i=173; i<256; i++))
 do
-v=$(/sbin/route add -net "$i".0.0.0 netmask 255.0.0.0 gw 172.21.0.1 dev eth0)
+v=$(/sbin/route add -net "$i".0.0.0 netmask 255.0.0.0 gw #GATEWAY_ADDR dev eth0)
+#The same gateway address above.
 echo "$v"
 done
 
