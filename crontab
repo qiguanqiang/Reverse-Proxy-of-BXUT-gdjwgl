@@ -1,0 +1,6 @@
+*/1 * * * * /usr/local/qcloud/stargate/admin/start.sh > /dev/null 2>&1 &
+0 0 * * * /usr/local/qcloud/YunJing/YDCrontab.sh > /dev/null 2>&1 &
+0 0 * * * MotionPro -s && sh ~/proxy/connect.sh && sh ~/proxy/route_add.sh
+0 5 * * * sh ~/proxy/split.sh && nginx -s reload
+09 0 * * * kill `ps -ef | grep detect_offline.sh | grep -v grep | awk '{print $2}'`
+10 0 * * * sh /root/proxy/detect_offline.sh
