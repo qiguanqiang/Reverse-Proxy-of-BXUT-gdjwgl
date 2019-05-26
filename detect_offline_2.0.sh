@@ -12,6 +12,6 @@ do
 	else
 		MotionPro -s && sh /root/proxy/connect.sh && sh /root/proxy/route_add.sh
 		nginx -s reload
-		echo `date +%Y-%m-%d %H:%M:%S`': Failed! Excuted connection scripts!' >> $LOG_PATH/Mei_running.log
+		echo `date +%Y-%m-%d_%H:%M:%S`': Failed! Excuted connection scripts!' >> $LOG_PATH/Mei_running.log
 	fi
 done
