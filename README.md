@@ -1,5 +1,5 @@
 # Reverse-Proxy-of-BJUT-gdjwgl
-The base service of BJUTservice of @YahuiAn
+The base service of BJUTservice of @a liar (shame on him)
 
 # 一、简介
    
