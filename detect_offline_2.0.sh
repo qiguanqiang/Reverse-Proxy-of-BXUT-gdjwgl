@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LOG_PATH='/var/log/Mei_bjut'
+LOG_PATH='/var/log/Mei_bxxx'
 
 while true
 do
